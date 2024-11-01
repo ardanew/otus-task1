@@ -10,7 +10,7 @@ endif()
 
 target_link_libraries(hello-tests PRIVATE hello GTest::gtest_main)
 
-add_test(HelloTest "${CMAKE_BINARY_DIR}/bin/hello-tests")
+add_test(HelloTest "${CMAKE_INSTALL_PREFIX}/tests/hello-tests")
 
 include(GNUInstallDirs)
 install(
