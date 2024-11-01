@@ -1,0 +1,22 @@
+name: Linux
+
+on:
+  push:
+  pull_request:
+    branches: [ main ]
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install tools
+      run: sudo apt update -y && sudo apt install -y g++ cmake libgtest-dev
+
+    - name: CMake full build & install
+      run: ./scripts/build-x86_64-linux.sh 
