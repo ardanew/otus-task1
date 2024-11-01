@@ -15,6 +15,6 @@ add_test(HelloTest "${CMAKE_BINARY_DIR}/bin/hello-tests")
 include(GNUInstallDirs)
 install(
     TARGETS hello-tests
-    PERMISSIONS OWNER_WRITE OWNER_READ
+    PERMISSIONS OWNER_WRITE OWNER_READ OWNER_EXECUTE
     RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/tests
 )

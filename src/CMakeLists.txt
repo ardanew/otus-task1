@@ -9,6 +9,6 @@ target_link_libraries(helloworld_cli hello)
 include(GNUInstallDirs)
 install(
     TARGETS helloworld_cli
-    PERMISSIONS OWNER_WRITE OWNER_READ
+    PERMISSIONS OWNER_WRITE OWNER_READ OWNER_EXECUTE
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
