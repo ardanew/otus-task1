@@ -2,7 +2,8 @@
 
 # -------- CMake
 PLATFORM_BUILD_DIR="x86_64-linux-release"
-PACKAGE_ROOT_DIR=$(realpath ..)
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+PACKAGE_ROOT_DIR=$(realpath ${SCRIPT_DIR}/..)
 CMAKE_BINARY_DIR="${PACKAGE_ROOT_DIR}/build/${PLATFORM_BUILD_DIR}"
 CMAKE_BUILD_TYPE="Release"
 CMAKE_INSTALL_PREFIX="${PACKAGE_ROOT_DIR}/output/${PLATFORM_BUILD_DIR}"
