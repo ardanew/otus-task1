@@ -14,7 +14,7 @@ add_test(HelloTest "${CMAKE_INSTALL_PREFIX}/tests/hello-tests")
 
 include(GNUInstallDirs)
 install(
-    TARGETS hello-tests
+    TARGETS hello-tests COMPONENT tests
     PERMISSIONS OWNER_WRITE OWNER_READ OWNER_EXECUTE
-    RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/tests
+    RUNTIME DESTINATION tests
 )
